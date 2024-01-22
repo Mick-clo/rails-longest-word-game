@@ -1,0 +1,19 @@
+<h1>New game</h1>
+
+<div class="d-inline-flex w-4 alert alert-primary"><%= @first %></div>
+<div class="d-inline-flex w-4 alert alert-primary"><%= @second %></div>
+<div class="d-inline-flex w-4 alert alert-primary"><%= @third %></div>
+<div class="d-inline-flex w-4 alert alert-primary"><%= @fourth %></div>
+<div class="d-inline-flex w-4 alert alert-primary"><%= @fifth %></div>
+<div class="d-inline-flex w-4 alert alert-primary"><%= @sixth %></div>
+<div class="d-inline-flex w-4 alert alert-primary"><%= @seventh %></div>
+<div class="d-inline-flex w-4 alert alert-primary"><%= @eigth %></div>
+<div class="d-inline-flex w-4 alert alert-primary"><%= @ninth %></div>
+<div class="d-inline-flex w-4 alert alert-primary"><%= @tenth %></div>
+
+<p>What is the longest word you can find?</p>
+<form action="/score" method="POST" data-turbo="false">
+  <input type="text" name="word" value="<%= params[:word] %>">
+  <input class="btn btn-primary" type="submit" value="Play">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+</form>

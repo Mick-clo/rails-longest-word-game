@@ -1,0 +1,15 @@
+<h1>Result</h1>
+
+<% chosen_word = params[:word].to_s.chars %>
+
+<% if chosen_word.each { |a| @letras.foreach { |b| a != b }}%>
+  <%= "Sorry but #{params[:word]} can't built out of #{chosen_word}" %>
+  <% else %>
+  <%= "Congratulations! #{params[:word]} is a valid English word!" %>
+<% end %>
+
+
+<!--"Sorry but -- does not seem to be a valid English word..." -->
+
+
+<%= link_to "Play again", new_path %>
